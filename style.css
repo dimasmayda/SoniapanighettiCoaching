@@ -1,0 +1,1029 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap');
+
+* {box-sizing: border-box;
+margin: 0;
+padding: 0;}
+
+body {    
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+header {
+    background-color: #f8f7f3;
+    font-family: 'Cormorant', serif;
+    text-align: center;
+    position: relative;
+    padding: 1em;
+    z-index: 9
+    
+}
+
+.marca {
+    color: #abd145;    
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+}
+
+
+
+@media screen and (max-width:480px) {
+    .marca {
+        margin-bottom: .7em;
+        font-size: 2rem;        
+        text-align: center;        
+        margin-left: .8em;
+}
+
+  .hero .inner-hero h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1em;    
+    margin-bottom: 90px;    
+    width: 100%;
+    margin-top: -10px;
+       
+  }
+  
+ .hero .inner-hero p { 
+     display: inline-block;   
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px; 
+    margin-top: 30px;   
+    width: 90vw;
+  }
+    
+
+  .contact-button {
+      margin-top:20px;
+ 
+  }
+
+  .foto-como-funciona {
+    max-width:250px;    
+    margin: 0 auto;   
+         
+    align-self: center;
+   
+    
+}   
+
+}
+
+
+
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: rgba(35, 36, 39, 0.74);
+    height:2px;
+    width: 1.3em;
+    border-radius: 2px;
+    position: relative;    
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: #f8f7f3;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out ;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(94, 94, 94);
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    
+}
+
+nav a:hover {
+    font-weight: 600;
+    color:rgb(81, 76, 63);
+    text-decoration: underline;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+
+
+@media screen and (min-width:785px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .marca {
+        margin-bottom: .7em;
+        font-size: 2rem;        
+        text-align: center;        
+        margin-left: .2em;        
+    }
+    
+
+    nav  {
+        all: unset;        
+        width: 90%;   
+        margin-bottom: 1em ; 
+        margin-left: .2em; 
+        margin-top: 1em;   
+        
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;      
+        
+    }
+
+    nav li  {
+        all: unset;   
+        
+    }
+
+     li + li {
+        margin-left: 10px; 
+    }
+
+    nav a {
+        opacity: 1;
+        font-size: 1.2rem; 
+        font-weight: 500;       
+        
+    }    
+    
+    .intro-cita p {        
+        font-size: 1.5rem;
+    }
+    
+    .intro-principal {       
+        padding: 0 5em;
+        line-height: 1.5em;
+        font-size: 1.5rem;
+        max-width: 900px;
+        margin: 0 auto;     
+        
+    }
+
+    .como-funciona-container {
+        display: flex;
+        justify-content:center ;
+        align-items: flex-start;
+        padding: 2em 2em;        
+        margin-bottom: 5em;
+        
+    }
+
+    .foto-como-funciona {
+        max-width:450px;       
+        margin-right: 2em;        
+        align-self: center;
+    }   
+
+    .como-funciona-texto {       
+        align-self: center;        
+    }
+
+   .como-funciona-texto .titulo-como-funciona  {
+        font-size: 2rem;
+    }
+   
+    .lista-como-funciona li {
+        margin: 0 auto;
+    }
+
+    .cita-como-funciona {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+    .sobre-mi-container {
+        display: flex;
+        justify-content: space-around;        
+    }
+
+    .sobre-mi h2 {
+        font-size: 2.2rem;
+        font-style: italic;
+    }
+
+
+    .conoceme {
+        width: 40vw;
+        max-width: 40%;        
+    }
+
+    .conoceme h3 {
+        font-size: 2rem;
+    }
+
+    .razones {        
+        display: flex;
+        justify-content:center ;
+        align-items: flex-start;
+        padding: 2em 2em;        
+        margin-bottom: 1em;
+        
+    }
+
+    .razones-foto {
+        max-width:600px;  
+        min-width: 300px;     
+        margin-right: 2em;        
+        align-self: center;
+        
+    } 
+
+    .razones-contenido li {
+        margin: 0 auto;
+    }
+
+    .como-funciona-principal-container {
+        
+        display: flex;
+        justify-content: space-between ;
+        align-items: flex-start;
+        padding: 2em 2em;        
+        margin-bottom: 5em;
+        max-width: 1000px;
+        margin: 0 auto;
+        
+    }
+
+    .proceso-coaching-img {
+        min-width: 300px;
+        width:400px;       
+        margin-right: 5em;        
+        align-self: center;
+       
+    }
+
+    .proceso-info {
+        max-width: 500px;
+        margin-left: 2em;
+        margin-top: -1em;
+        
+    
+        line-height: 1.5em;
+    }
+
+    .proceso-info h3 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .principal h2 {
+        font-size: 2.3rem;
+        margin-bottom: 1em;
+    }
+    
+   .pasos {
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       
+       max-width: 1000px;
+       margin: 0 auto;
+   }
+
+
+   .seis-pasos .pasos-titulo  {       
+       font-size: 2.5rem;
+       margin: 0;
+       margin-bottom: 1em;
+   }
+
+   .pasos-texto {
+       max-width: 800px;
+      
+       line-height: 1.5em ;      
+     
+   }
+
+   .paso-img {       
+       min-width: 120px;
+       max-width: 150px;
+   }
+
+   .pasos-texto h3 {
+       font-size: 2rem;
+   }
+    
+   .sonia-container {
+       display: flex;
+       justify-content: center;
+       max-width: 1000px;
+       line-height: 1.5em;
+       align-items: center;
+       margin: 0 auto;
+   }
+
+   .foto-sonia-principal {      
+       max-width: 450px;
+       margin-right: 1.5em;
+   }
+   
+   .texto-sonia {
+       max-width: 1000px;
+       line-height: 1.5em;
+       margin: 0 auto;
+       
+   }
+
+   .fortalezas-container{    
+    max-width: 1000px;
+    margin: 0 auto;
+   }
+
+   .testimonios-title h2 {
+       font-size: 2.5rem;      
+   }
+
+   .testimonios-title .subtitulo-testimonios  {
+       font-size: 1.8rem;
+       
+   }
+
+   .fortalezas-texto {
+       line-height: 1.5em;
+   }
+
+   .palabras-agradecimiento {
+    background-color: #f0f0f088;
+       width: 100%;
+       
+   }
+
+   .palabras-agradecimiento-container {
+       max-width: 1000px;  
+       margin: 0 auto;     
+   }
+
+   .cita-agradecimiento .cita-texto {
+       font-size: 1.3rem;
+       line-height: 1.5em;
+   }
+
+   .cita-agradecimiento .cita-persona {
+       font-size: 1.2rem;
+   }
+
+   .social p {
+       font-size: 1.2rem;
+   }
+
+   
+
+.videos-section .video-container {
+    display: flex; 
+    max-width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.videos-section .video-responsive {
+    width: 50%;
+    padding: 1em;
+    margin: 0 auto;
+
+}
+ 
+
+}
+
+
+
+@media screen and (min-width:1100px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .marca {
+        margin-bottom: 0;
+        font-size: 2.2rem;
+    }
+
+    nav {
+        width: 60%;
+        margin: 0;       
+        
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+   
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero {
+    background-image: url(img/prueba.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;    
+    width: 100vw;
+    height: 80vh;
+
+  }
+
+  @media screen and (min-width:1100px) {
+    .hero {        
+        background-repeat: inherit;        
+        background-position: center 850px;   
+      }
+
+     .inner-hero {
+         margin-top: 70px;
+     }
+
+
+  }
+
+
+  .inner-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+
+
+  
+  .inner-hero h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 1em;    
+    color: rgb(234, 255, 128);
+    margin-bottom: 15px;
+    font-family: 'Cormorant', serif;
+    text-transform: capitalize;    
+  }
+  
+  .inner-hero p {    
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 35px;
+    color: whitesmoke;
+  }
+  
+  a.contact-button {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+    background-color: white;
+    padding: 10px 20px;
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 32px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.26);
+  
+  }
+
+  a.contact-button:hover {
+    background-color: rgba(255, 255, 255, 0.918);
+  }
+
+
+.intro {
+    margin-top: 2.4em;
+    text-align: center;
+    padding: 0 1.5em;
+    font-family: 'Cormorant', serif;
+    color: rgb(68, 58, 31);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 2.5em;
+    margin-left: 0;
+    margin-right: 0;
+    
+}
+
+.intro-cita p {
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.intro-principal {
+    margin-top: 2em;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.como-funciona {
+    background-color: #f0f0f088;
+    padding: 4em 1.5em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(68, 58, 31, 0.8);
+    width: 100%;
+}
+
+.como-funciona-texto {
+    margin-top: 1.5em;
+}
+
+.como-funciona-texto h2 {
+    font-size: 2rem;
+    text-align: left;
+    text-transform: capitalize;
+    line-height: 1em;
+    margin-bottom: 1em;
+    font-family: 'Cormorant', serif;
+    color:rgb(26, 26, 26);
+}
+
+ ul {
+    margin-left: 1.5em;
+    text-align: left;    
+    font-size: .9rem;
+    color: rgba(68, 58, 31, 0.8);
+    padding: 0 .5em;
+    font-weight: 500;
+}
+
+ li {
+    padding: .3em 0;
+    line-height: 20px;
+}
+
+.como-funciona-button {
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color:  #acd145e1;;
+    padding: 5px 10px;
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 32px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-bottom: 3em;
+    letter-spacing: 2px;
+}
+
+.cita-como-funciona {
+    font-style: italic;
+    padding: 1em 1em 0;
+}
+
+.cita {
+    margin-bottom: .5em;
+}
+
+.sobre-mi {
+    padding: 3em 1.5em 2em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(68, 58, 31, 0.8);
+        
+}
+
+ h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 1em;
+    margin-bottom: 1.5em;
+    font-family: 'Cormorant', serif;
+    color:rgb(26, 26, 26);
+}
+
+h3{
+    font-size: 1.5rem;
+    font-family: 'Cormorant', serif;
+    color:rgb(26, 26, 26);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 1em 0;
+}
+
+.sobre-mi p{
+    color:rgba(68, 58, 31, 0.8);
+}
+
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color:  #6EC24F;
+    padding: 5px 15px;
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 32px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin: 2em 0;
+    letter-spacing: 2px;
+}
+
+.boton:hover {
+    background-color:#69a154;
+}
+
+.razones {
+    background-color: #f0f0f088;
+    padding: 4em 1.5em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(68, 58, 31, 0.8);
+}
+
+.razones h2{
+    margin: 1em 0;    
+}
+
+ol {
+    margin-left: 1.5em;
+    text-align: left;
+    margin-bottom: 2em;
+    font-size: .9rem;
+    color: rgba(68, 58, 31, 0.8);
+    padding: 0 .5em;
+    font-weight: 500;    
+
+}
+
+.razones .boton {
+    margin-top: 0;
+}
+
+#contacto {
+    padding: 4em 1.5em;
+    text-align: center;
+}
+
+#contacto p{
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(68, 58, 31, 0.8);
+    margin-bottom: 2em;
+}
+
+.fa {
+    padding: 20px;    
+    text-align: center;
+    text-decoration: none;
+    margin: .5em;
+    border-radius: 50%;
+  }
+
+  .fa-instagram, .fa-whatsapp {
+    background: #6EC24F;
+    color: white;
+  }
+
+  .fa-instagram:hover, .fa-whatsapp:hover{
+    background-color:#69a154;
+  }
+
+  footer {
+    background-color: #c3c3c377;
+    padding: 3em 1.5em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(68, 58, 31, 0.8);
+    width: 100%;    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;     
+    font-size: .7rem;
+  }
+
+  footer a {
+      text-decoration: none;
+      font-style: italic;      
+      color: rgb(91, 80, 192);
+      
+  }
+
+  footer a:hover {
+      text-decoration: underline;
+  }
+
+  .como-funciona-foto {
+      background-image: url(/img/piedras.jpg);      
+      height: 220px;
+      background-position: center;
+      background-size: cover;  
+ }
+
+ @media screen and (min-width:1100px) {
+    .como-funciona-foto {
+    height: 350px;
+    background-size: cover; 
+    background-position: center 600px ; 
+    }
+  
+}
+
+.principal {
+    background-color: white;
+    text-align: left;
+    color: rgba(68, 58, 31, 0.87); 
+    padding: 3em 1em;  
+  
+}
+
+.proceso-coaching-img {
+  
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.seis-pasos {
+    padding: 1em;
+    background-color: white;
+    
+}
+
+.seis-pasos h2 {
+    font-size: 2.2em;
+}
+
+.pasos-texto {
+    text-align: left;
+}
+
+.sonia-foto {
+    background-image: url(/img/sonia-foto.jpg);      
+    height: 220px;
+    background-size: cover; 
+    background-position: center ;   
+}
+
+@media screen and (min-width:1100px) {
+    .sonia-foto {
+    height: 350px;
+    background-size: cover; 
+    background-position: center 550px ; 
+    }
+  
+}
+
+.sonia-principal {    
+    background-color: #f0f0f088;
+    padding: 3em 1.5em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(68, 58, 31, 0.938);
+    text-align: left;
+    width: 100%;
+}
+
+.sonia-principal p{
+    padding: 1em 0;
+    line-height: 1.7em;
+}
+
+.inspiracion-foto {
+    background-image: url(/img/inspiracion.jpg);      
+    height: 220px;
+    background-position: center;
+    background-size: cover;  
+}
+
+@media screen and (min-width:1100px) {
+    .inspiracion-foto {
+    height: 350px;
+    background-size: cover; 
+    background-position: center 700px ; 
+    }
+  
+}
+
+.inspiracion-head {
+    background-color: white;
+    padding: 3em 1.5em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(68, 58, 31, 0.8)
+}
+
+.inspiracion-head, .cita p{
+    font-size: 1em;
+    font-style: italic;
+}
+
+.inspiracion-head h3,
+.testimonios-head h3 {
+    font-style: italic;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.inspiracion-head h3 {
+    margin-bottom: 0 ;
+    margin-top: 2em;
+}
+
+
+.paso-img {
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pasos-texto {
+    margin-bottom: 1.5em;
+    color:rgba(68, 58, 31, 0.938);
+}
+
+.testimonios-foto {
+    background-image: url(/img/testimonios-hero.jpg);      
+    height: 220px;
+    background-position: center center;
+    background-size: cover;          
+}
+
+@media screen and (min-width:1100px) {
+    .testimonios-foto {
+    height: 350px;
+    background-size: cover; 
+    background-position: center 600px ; 
+    }
+  
+}
+
+.testimonios-head {    
+    padding: 3em 1.5em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(68, 58, 31, 0.8);
+}
+
+.testimonios-head h3{
+    font-size: 1.5rem;
+}
+
+.espiral {
+    width: 100px;
+}
+
+.fortaleza {
+    padding: 1em 0;
+}
+
+.fortaleza p {
+    color:rgba(68, 58, 31, 0.856);
+}
+
+.fortalezas-title {
+    display: flex;    
+    align-items: center;
+}
+
+.fortalezas-container {
+    text-align: left;
+}
+
+.fortalezas-container h3 {
+    font-size: 1.8rem;
+}
+
+.palabras-agradecimiento {
+    padding: 3em 1.5em;
+    text-align: center;
+}
+
+.cita-agradecimiento {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color:rgb(68, 58, 31);
+    font-weight: 500;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.cita-agradecimiento .comilla {
+    font-size: 3rem;
+    font-weight: 200;    
+    line-height: .3em;
+}
+
+.cita-persona {
+    margin-top: .5em;
+    font-size: 1rem;
+}
+
+.video-container {    
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2em 1.5em;      
+}
+
+
+.video-responsive {
+    width: 100%;
+    display: inline-block;
+    height: 56.25%;
+    margin: 1em 0
+  }
+  
+  .aspect-ratio-16-9 {
+    width: 100%;
+    padding-top: 56.25%; 
+    position: relative;
+    
+  }
+  
+  .video-responsive iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    
+  }
